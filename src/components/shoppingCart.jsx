@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import {CartContext} from './CartContext'
 
 function ShoppingCart(props) {
-    const contextValue = useContext(CartContext);
+    const [cart, setCart] = useContext(CartContext);
 
     return (
         <div>
-            <span>items in cart: 0 </span>
-            <span>total price: {contextValue} </span>
+            <span>items in cart: {cart.length} </span>
+            <span>total price: {cart.price} </span>
         </div>
     );
 }

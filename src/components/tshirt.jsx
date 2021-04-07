@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {CartContext} from './CartContext';
 
 function Tshirt(props) {
+    const [cart, setCart] = useContext(CartContext);
+
 
     const addToCart = () => {
-        console.log('click ..')
+        const tshirt = {name: props.name, price: props.price}
+        setCart(currentCart => [...currentCart, tshirt])   //this set destructure de card and add the new tshirt object to it.  
     }
 
     return (
