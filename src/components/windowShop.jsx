@@ -1,4 +1,5 @@
 import React from 'react';
+import Tshirt from './tshirt';
 
 function WindowShop(props) {
 
@@ -10,33 +11,11 @@ function WindowShop(props) {
         
     ]
 
-
-    const showItems=() => {
-        return dataBase.map(each =>{
-            return(
-
-                <div style={{display:'flex', flexDirection:'column'}}>
-                    <h5>{each.name}</h5>
-                    <p>Price: {each.price}</p>
-                    <p>Decription</p>
-                    <button style={{width:'8em', borderRadius:'4px'}} onClick={buyItems}>buy</button>
-                </div>
-
-            )
-        })
-    }
-
-    const buyItems = () => {
-        // console.log('buying item')
-        // to implement later
-    }
-
-
-
     return (
         <div>
-
-            {showItems()}
+            <h4>WindowShop</h4>
+            {dataBase.map(item =>   <Tshirt name={item.name} price={item.price} key={item.id}/>  )} 
+            
         </div>
     );
 }

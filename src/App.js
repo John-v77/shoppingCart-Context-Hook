@@ -1,9 +1,7 @@
 import ShoppingCart from './components/shoppingCart.jsx'
 import WindowShop from './components/windowShop.jsx'
-import TshirtList from './components/TshirtList.jsx'
 import {CartProvider} from './components/CartContext'
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React from 'react'
 import './components/style.css'
 
 function App() {

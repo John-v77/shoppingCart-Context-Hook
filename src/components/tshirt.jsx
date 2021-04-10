@@ -13,9 +13,9 @@ function Tshirt(props) {
     return (
         <div>
             <h3>{props.name}</h3>
-            <h3>{props.price}</h3>
-            <h3>{props.key}</h3>
-            <button onClick={addToCart}> buy </button>
+            <h4>{props.price}</h4>
+            <h4>{props.id}</h4>
+            <button onClick={addToCart}> Add to cart </button>
         </div>
     );
 }
